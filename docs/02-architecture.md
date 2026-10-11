@@ -26,7 +26,7 @@ The architecture aims to achieve the following objectives:
 **3\. High-Level Architecture**  
 The ecosystem follows a modular architecture composed of independent applications, each responsible for a specific technical domain.
 
-\`\`\`python  
+```text  
                   **IT Tools Ecosystem**  
                             |  
              \+--------------+--------------+  
@@ -41,7 +41,7 @@ The ecosystem follows a modular architecture composed of independent application
              |              |              |  
              v              v              v  
         Support DB     Monitoring DB    Data Storage  
-\`\`\`
+```
 
 This diagram represents the intended logical separation of responsibilities. It does not imply that all components, APIs, or databases have already been implemented.  
 Each application may have its own frontend, backend, persistence layer, configuration, and deployment process, depending on its requirements.  
@@ -302,7 +302,8 @@ A message broker is not required for the initial architecture. Any asynchronous 
 The applications are independent but may participate in shared workflows.
 
 **Example: Monitoring Incident Workflow**  
-\`\`\`python  
+
+```text  
 \+--------------------+  
 |      SysGuard      |  
 | Detects an anomaly |  
@@ -342,7 +343,7 @@ The applications are independent but may participate in shared workflows.
 \+--------------------+  
 | Reports and Metrics|  
 \+--------------------+  
-\`\`\`
+```
 
 This workflow describes a planned integration scenario, not an existing automated capability.
 
@@ -530,7 +531,7 @@ Testing requirements should grow alongside implemented functionality rather than
 The repository should separate ecosystem-level documentation from application-specific source code and documentation.  
 The proposed top-level organization is:
 
-\`\`\`python  
+```text  
 Tech-tools/  
 ├── README.md  
 ├── LICENSE  
@@ -553,7 +554,7 @@ Tech-tools/
 ├── helpflow/  
 ├── sysguard/  
 └── dataflow/  
-\`\`\`
+```
 
 Each application may introduce additional directories for its own source code, tests, configuration, migrations, and documentation.  
 The exact internal directory structure should be defined in the repository structure document and refined as implementation begins.
